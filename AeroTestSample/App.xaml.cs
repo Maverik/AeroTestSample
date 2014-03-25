@@ -1,0 +1,1 @@
+﻿namespace AeroTestSample { public partial class App { } } 
