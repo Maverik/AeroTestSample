@@ -1,24 +1,32 @@
 ﻿<Window x:Class="AeroTestSample.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Button Content="Do Stuff!">
-        <Button.Style>
-            <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <RadialGradientBrush>
-                            <GradientStop Color="#F4083268" Offset="1"/>
-                            <GradientStop Color="#FE5C9247"/>
-                        </RadialGradientBrush>
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="BorderBrush" Value="Transparent"/>
-                <Setter Property="Foreground" Value="White"/>
-                <Setter Property="FontFamily" Value="Arial"/>
-                <Setter Property="FontSize" Value="16"/>
-                <Setter Property="Focusable" Value="False"/>
-            </Style>
-        </Button.Style>
-    </Button>
+        Title="MainWindow" Height="191" Width="246">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Content="Do Stuff!" Padding="10" Margin="10"/>
+        <StackPanel>
+            <StackPanel.Resources>
+                <ResourceDictionary Source="/PresentationFramework.Aero,Version=4.0.0.0,Culture=Neutral,PublicKeyToken=31bf3856ad364e35,processorArchitecture=MSIL;component/themes/Aero.NormalColor.xaml"/>
+            </StackPanel.Resources>
+            <Button Content="Do Stuff!" Padding="10" Margin="10">
+                <Button.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                        <Setter Property="Background">
+                            <Setter.Value>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#F4083268" Offset="1"/>
+                                    <GradientStop Color="#FE5C9247"/>
+                                </RadialGradientBrush>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="BorderBrush" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontFamily" Value="Arial"/>
+                        <Setter Property="FontSize" Value="48"/>
+                        <Setter Property="Focusable" Value="False"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </StackPanel>
 </Window>
